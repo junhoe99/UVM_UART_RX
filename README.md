@@ -1,12 +1,52 @@
 -----------------------
 # 🌐[UVM_UART_RX]
 
-> 
+> SystemVerilog 기반 UVM을 활용해 UART IP의 **RX 모듈**을 Verification하는 프로젝트입니다.
 
 
 ## 🔎 Overview
+본 프로젝트는 UART IP의 RX 모듈을 대상으로 UVM Testbench를 설계하고, 시뮬레이션을 통해 안정적 동작 검증을 수행합니다.
 
 ## 📌 DUT Spec Analysis
+
+### **1. Key Parameters / Features**
+- **Data Bits** : 8bit  
+- **Parity Bits** : 없음 → 단순성과 리소스 절약을 위해 parity bit 미사용
+- **BAUD Rate** : 9600 bps
+- **Oversampling Rate** : 16  
+  UART는 비동기 통신이므로 TX/RX 클럭이 완벽히 맞지 않아도 동작해야 함 → **16배 Oversampling**으로 타이밍 동기화 & 정확한 데이터 샘플링 구현
+
+---
+
+### **2. System Block Diagram**
+![System Block](https://github.com/user-attachments/assets/6a21e784-cfe6-4cf7-9939-bc80397ead5a)
+
+---
+
+### **3. Protocol**
+![Protocol](https://github.com/user-attachments/assets/0bf95832-7a3f-4a1a-8e93-271f4bd011b7)
+
+#### **필수 Protocol 규칙(ASSERTION & COVERAGE로 검증할 예정)**
+| 규칙 | 설명 |
+|------|------|
+| **START BIT** | 각 전송 frame은 반드시 **start bit = 0**으로 시작해야 함 |
+| **STOP BIT**  | 전송 종료 시 반드시 **stop bit = 1**로 끝나야 함 |
+| **BIT SEQUENCE** | 데이터 bit는 **LSB → MSB** 순서로 전송 |
+| **BIT WIDTH PER CLK** | 각 비트의 duration은 **baud rate**에 맞춰야 함 |
+
+---
+
+### **4. FSM / ASM**
+**🎯 FSM**  
+![FSM](https://github.com/user-attachments/assets/08fe5b3e-cd1f-4ae5-a591-d93564ed21d1)
+
+
+**🎯 ASM**  
+![ASM](https://github.com/user-attachments/assets/4bb34b18-3029-4c76-a67c-f4e1cb682ad6)
+
+---
+
+
 
 ## 🔁 Verification Plan
 
