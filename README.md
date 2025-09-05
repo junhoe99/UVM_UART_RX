@@ -14,7 +14,7 @@
 - **Parity Bits** : 없음 → 단순성과 리소스 절약을 위해 parity bit 미사용
 - **BAUD Rate** : 9600 bps
 - **Oversampling Rate** : 16  
-  UART는 비동기 통신이므로 TX/RX 클럭이 완벽히 맞지 않아도 동작해야 함 → **16배 Oversampling**으로 타이밍 동기화 & 정확한 데이터 샘플링 구현
+  > UART는 비동기 통신이므로 TX/RX 클럭이 완벽히 맞지 않아도 동작해야 함 → **16배 Oversampling**으로 타이밍 동기화 & 정확한 데이터 샘플링 구현
 
 ---
 
@@ -31,9 +31,9 @@
 #### **필수 Protocol 규칙(ASSERTION & COVERAGE로 검증할 예정)**
 | 규칙 | 설명 |
 |------|------|
-| **START BIT** | 각 전송 frame은 반드시 **start bit = 0**으로 시작해야 함 |
-| **STOP BIT**  | 전송 종료 시 반드시 **stop bit = 1**로 끝나야 함 |
-| **BIT SEQUENCE** | 데이터 bit는 **LSB → MSB** 순서로 전송 |
+| **START BIT** | 각 수신 frame은 반드시 **start bit = 0**으로 시작해야 함 |
+| **STOP BIT**  | 수신 종료 시 반드시 **stop bit = 1**로 끝나야 함 |
+| **BIT SEQUENCE** | 데이터 bit는 **LSB → MSB** 순서로 수신 |
 | **BIT WIDTH PER CLK** | 각 비트의 duration은 **baud rate**에 맞춰야 함 |
 
 ---
