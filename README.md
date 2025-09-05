@@ -19,7 +19,8 @@
 ---
 
 ### **2. System Block Diagram**
-![System Block](https://github.com/user-attachments/assets/6a21e784-cfe6-4cf7-9939-bc80397ead5a)
+![System Block](https://github.com/user-attachments/assets/cdb8ee6c-ed71-44ae-be4e-9f43b3a098cb)
+
 
 ---
 
