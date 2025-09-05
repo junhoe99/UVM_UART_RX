@@ -40,7 +40,8 @@
 
 ### **4. FSM / ASM**
 **🎯 FSM**  
-![FSM](https://github.com/user-attachments/assets/08fe5b3e-cd1f-4ae5-a591-d93564ed21d1)
+![FSM](https://github.com/user-attachments/assets/ab4d98de-194a-43ec-aa6f-69704e206bf9)
+
 
 
 **🎯 ASM**  
