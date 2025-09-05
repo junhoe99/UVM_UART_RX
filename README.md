@@ -25,7 +25,7 @@
 ---
 
 ### **3. Protocol**
-![Protocol](https://github.com/user-attachments/assets/c9d2f031-df47-48eb-9738-e03486856c26")
+![Protocol](https://github.com/user-attachments/assets/c9d2f031-df47-48eb-9738-e03486856c26)
 
 
 #### **필수 Protocol 규칙(ASSERTION & COVERAGE로 검증할 예정)**
